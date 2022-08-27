@@ -1,4 +1,4 @@
-# quark
+# preon
 
 A free url shortener
 
