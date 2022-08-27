@@ -1,0 +1,24 @@
+{
+  "name": "quark",
+  "description": "A free url shortener",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "./app start",
+    "dev": "./app dev",
+    "lint": "./app lint",
+    "server:start": "yarn workspace server start",
+    "server:dev": "yarn workspace server dev",
+    "server:lint": "yarn workspace server lint",
+    "client:build": "yarn workspace client build",
+    "client:start": "yarn workspace client start",
+    "client:dev": "yarn workspace client dev"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "workspaces": [
+    "packages/**"
+  ]
+}

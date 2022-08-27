@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "description": "quark server",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/**"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.1.0",
+    "@fastify/sensible": "^5.1.0",
+    "dotenv": "^16.0.1",
+    "fastify": "^4.5.2",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19"
+  }
+}
