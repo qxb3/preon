@@ -2,7 +2,7 @@
 	export async function preload(page) {
 		const { id } = page.params
 
-		const res = await this.fetch(`http://localhost:5000/api/click?id=${id}`, { method: 'POST' })
+		const res = await this.fetch(`${process.env.API_URL}/click?id=${id}`, { method: 'POST' })
 		const data = await res.json()
 
 		if (res.status !== 200)
