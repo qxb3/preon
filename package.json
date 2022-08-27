@@ -1,7 +1,7 @@
 {
-  "name": "quark",
+  "name": "preons",
   "description": "A free url shortener",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "scripts": {
