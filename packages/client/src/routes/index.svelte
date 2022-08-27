@@ -43,7 +43,7 @@
 
 <div class="container">
 	<div class="text-center mt-5 mb-4">
-		<h1 style="font-size: 1.7rem;">preons</h1>
+		<h1 style="font-size: 1.7rem">preon</h1>
 		<p style="font-size: 1.4rem;">A free url shortener</p>
 	</div>
 
