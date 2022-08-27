@@ -37,4 +37,4 @@ You will see `.env.example` on both `client` and `server` workspaces
 
 # LICENSE
 
-<a href="">MIT</a>
+<a href="https://github.com/qxb3/quark/tree/main">MIT</a>
