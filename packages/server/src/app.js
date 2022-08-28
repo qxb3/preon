@@ -17,9 +17,9 @@ exports.build = function() {
     }
   })
 
-  app.register(require('./api/shorten'), { prefix: '/api' })
-  app.register(require('./api/get'), { prefix: '/api' })
-  app.register(require('./api/click'), { prefix: '/api' })
+  app.register(require('./routes/shorten'), { prefix: '/api' })
+  app.register(require('./routes/get'), { prefix: '/api' })
+  app.register(require('./routes/click'), { prefix: '/api' })
 
   return app
 }
