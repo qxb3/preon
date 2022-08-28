@@ -1,6 +1,6 @@
 {
   "name": "preon",
-  "description": "A free url shortener",
+  "description": "A free and open source url shortener",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
