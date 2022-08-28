@@ -30,6 +30,7 @@ export default {
 					env: JSON.stringify({
 						'browser': true,
 						'NODE_ENV': JSON.stringify(mode),
+						API_URL: process.env.API_URL,
 						...dotenv.config().parsed
 					})
 				}
