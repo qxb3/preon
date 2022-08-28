@@ -5,6 +5,7 @@ exports.build = function() {
 
   app.register(require('@fastify/cors'))
   app.register(require('@fastify/sensible'))
+  app.register(require('@fastify/multipart'))
 
   app.addSchema({
     $id: 'url',
