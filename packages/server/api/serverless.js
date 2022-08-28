@@ -1,7 +1,7 @@
 require('dotenv/config')
 
-const { build } = require('./app')
-const { connectToDb } = require('./lib/utils/db')
+const { build } = require('../src/app')
+const { connectToDb } = require('../src/lib/utils/db')
 
 connectToDb(() => {
   const app = build()
