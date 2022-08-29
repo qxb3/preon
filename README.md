@@ -1,6 +1,6 @@
 # preon
 
-A free and opensource url shortener
+A free and open source url shortener
 
 # Contributing
 
