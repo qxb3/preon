@@ -12,19 +12,17 @@ const opts = {
 
 module.exports = (fastify, _, done) => {
   fastify.post('/shorten', opts, async (req, reply) => {
-    const { url, hostname } = req.query
+    const { url } = req.query
+    const { origin } = req.headers
 
     if (!url) return reply.badRequest('query \'url\' is required')
     if (!validateUrl(url)) return reply.badRequest('url is not a valid link')
-
-    if (!hostname) return reply.badRequest('query \'hostname\' is required')
-    if (!validateUrl(hostname)) return reply.badRequest('hostname is not a valid link')
 
     try {
       const id = crypto.randomBytes(6).toString('base64url')
       const result = await urls.create({
         id,
-        url: `${hostname.replace(/\/$/, '')}/${id}`,
+        url: `${origin}/${id}`,
         origin: url
       })
 
