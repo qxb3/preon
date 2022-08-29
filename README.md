@@ -27,4 +27,4 @@ You will see `.env.example` on both `client` and `server` workspaces
 
 # LICENSE
 
-[MIT](https://github.com/qxb3/quark/tree/main)
+[MIT](https://github.com/qxb3/preon/blob/main/LICENSE)
