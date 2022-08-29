@@ -3,3 +3,7 @@
 body {
   font-family: 'Anek Telugu', sans-serif;
 }
+
+a, .btn-link {
+  text-decoration: none;
+}

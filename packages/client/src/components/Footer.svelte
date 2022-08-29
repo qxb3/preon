@@ -17,9 +17,3 @@
     <p>Built by <a href={githubProfile} target="_blank">qxb3</a></p>
   </div>
 </footer>
-
-<style>
-	a {
-		text-decoration: none;
-	}
-</style>

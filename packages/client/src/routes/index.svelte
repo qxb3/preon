@@ -96,9 +96,3 @@
 </div>
 
 <Footer />
-
-<style>
-	.btn-link {
-		text-decoration: none;
-	}
-</style>
