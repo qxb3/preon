@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte'
+  import config from '../config'
 
   const dispatch = createEventDispatcher()
   let error = ''
@@ -9,8 +10,8 @@
     if (!id)
       return error = 'id is required'
 
-		const { API_URL } = env
-    const res = await fetch(`${API_URL}/get?id=${id}`)
+    const { API_URL } = env
+    const res = await fetch(`${API_URL}/get?id=${id.replace(`${location.origin}/`, '')}`)
     const data = await res.json()
 
     if (res.status !== 200)
@@ -33,7 +34,7 @@
         <div class="container">
           <div class="my-1">
             <label for="inp" class="form-label">Search</label>
-            <input bind:value={id} class="form-control" class:is-invalid={error} id="inp" type="text" placeholder="8TW_3jxl">
+            <input bind:value={id} class="form-control" class:is-invalid={error} id="inp" type="text" placeholder="8TW_3jxl or {config.APP_URL}/8TW_3jxl">
             <div class="invalid-feedback">{error}</div>
           </div>
         </div>

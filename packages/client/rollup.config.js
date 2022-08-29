@@ -1,3 +1,5 @@
+import 'dotenv/config'
+
 import path from 'path'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
@@ -8,7 +10,6 @@ import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
-import dotenv from 'dotenv'
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -30,8 +31,7 @@ export default {
 					env: JSON.stringify({
 						'browser': true,
 						'NODE_ENV': JSON.stringify(mode),
-						API_URL: process.env.API_URL,
-						...dotenv.config().parsed
+						API_URL: process.env.API_URL
 					})
 				}
 			}),

@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte'
 
+	import config from '../config'
 	import UrlModal from '../components/UrlModal.svelte'
 	import StatsModal from '../components/StatsModal.svelte'
 	import Footer from '../components/Footer.svelte'
@@ -11,13 +12,10 @@
 
 	let urlModal = null
 	let statsModal = null
-	let origin = ''
 
 	onMount(() => {
 		urlModal = new bootstrap.Modal(document.getElementById('urlmodal'))
 		statsModal = new bootstrap.Modal(document.getElementById('statsmodal'))
-
-		origin = location.origin
 	})
 
 	async function shorten() {
@@ -25,7 +23,7 @@
 			return error = 'Url is required'
 
 		const { API_URL } = env
-		const res = await fetch(`${API_URL}/shorten?url=${url}&hostname=${origin}`, { method: 'POST' })
+		const res = await fetch(`${API_URL}/shorten?url=${url}`, { method: 'POST' })
 		const data = await res.json()
 
 		if (res.status !== 200)
@@ -71,14 +69,14 @@
 		<ul>
 			<li>
 				Paste the url that you want to shorten. <br>
+				Then click the "Shorten" Button <br>
 				(Please note that you need to include the http:// or https://) <br>
-				Then click "Shorten" Button
 			</li>
 			<li>
 				To see how many clicks your shortened url has <br>
 				Click the "Url Stats" Button then paste the id of your shortend url <br>
 				You can see this id at the end of your url <br>
-				Example: {origin}/8TW_3jxl Then Your id is 8TW_3jxl
+				Example: {config.APP_URL}/8TW_3jxl Then Your id is 8TW_3jxl
 			</li>
 		</ul>
 	</section>

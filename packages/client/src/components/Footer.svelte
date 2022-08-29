@@ -7,10 +7,6 @@
     <a href="{githubProfile}/preon" class="m-2">
       <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" width="32px" height="32px">
     </a>
-
-    <a href="https://qxb3.tk" class="m-2">
-      <img src="https://www.iconpacks.net/icons/2/free-icon-web-search-4289.png" alt="browser" width="32px" height="32px">
-    </a>
   </div>
 
   <div>
