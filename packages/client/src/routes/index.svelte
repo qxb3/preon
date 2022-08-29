@@ -50,8 +50,8 @@
 
 <div class="container">
 	<div class="text-center mt-5 mb-4">
-		<h1 style="font-size: 1.9rem">preon</h1>
-		<p style="font-size: 1.2rem;">A free and open source url shortener</p>
+		<h1 class="display-3">preon</h1>
+		<p class="display-6">A free and open source url shortener</p>
 	</div>
 
 	<form on:submit|preventDefault={shorten} novalidate>
@@ -66,7 +66,7 @@
 		<button on:click={() => statsModal.show()} class="btn btn-link">Url Stats</button>
 	</div>
 
-	<section class="mt-5">
+	<section class="mt-3">
 		<h3>• How to use</h3>
 		<ul>
 			<li>
