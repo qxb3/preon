@@ -1,6 +1,6 @@
-const urls = require('../lib/models/urls')
-const { validateUrl } = require('../lib/utils/others')
-const crypto = require('crypto')
+// const urls = require('../lib/models/urls')
+// const { validateUrl } = require('../lib/utils/others')
+// const crypto = require('crypto')
 
 const opts = {
   schema: {
@@ -11,7 +11,7 @@ const opts = {
 }
 
 module.exports = (fastify, _, done) => {
-  fastify.post('/shorten', opts, async (req, reply) => {
+  fastify.get('/shorten', opts, async (req, reply) => {
     reply.send({ foo: 1 })
     // const { url } = req.query
     // const { origin } = req.headers
