@@ -11,7 +11,7 @@ const opts = {
 }
 
 module.exports = (fastify, _, done) => {
-  fastify.post('/shorten', opts, async (req, reply) => {
+  fastify.get('/shorten', opts, async (req, reply) => {
     const { url } = req.query
     const { origin } = req.headers
 
