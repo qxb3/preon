@@ -1,6 +1,6 @@
-// const urls = require('../lib/models/urls')
-// const { validateUrl } = require('../lib/utils/others')
-// const crypto = require('crypto')
+const urls = require('../lib/models/urls')
+const { validateUrl } = require('../lib/utils/others')
+const crypto = require('crypto')
 
 const opts = {
   schema: {
