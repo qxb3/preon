@@ -23,7 +23,7 @@
 			return error = 'Url is required'
 
 		const { API_URL } = env
-		const res = await fetch(`${API_URL}/shorten?url=${url}`, { method: 'POST' })
+		const res = await fetch(`${API_URL}/shorten?url=${url}`, { method: 'GET' })
 		const data = await res.json()
 
 		if (res.status !== 200)
