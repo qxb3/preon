@@ -19,7 +19,7 @@ exports.connectToDb = (callbackFn) => {
 
 let connection = null
 exports.connectToDbServerless = async () => {
-  console.log(typeof connection)
+  console.log(connection)
   if (!connection) {
     connection = await mongoose.connect(process.env.MONGO_URI).catch(err => {throw new Error(err) })
   }
