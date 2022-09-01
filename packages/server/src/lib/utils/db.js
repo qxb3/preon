@@ -1,18 +1,24 @@
 const mongoose = require('mongoose')
 
-exports.requiredType = function(type, options = {}) {
+exports.requiredType = (type, options = {}) => {
   return { type, ...options }
 }
 
-exports.createSchema = function(name, schema) {
+exports.createSchema = (name, schema) => {
   return mongoose.model(name, new mongoose.Schema(schema))
 }
 
-exports.connectToDb = function(callbackFn) {
+exports.connectToDb = (callbackFn) => {
   mongoose.connect(process.env.MONGO_URI, (err) => {
     if (err) return console.log(err)
 
     console.log('Connected to database')
     callbackFn()
   })
+}
+
+let connection = null
+exports.connectToDbServerless = async () => {
+  connection = await mongoose.connect().catch(err => {throw new Error(err) })
+  return connection
 }
