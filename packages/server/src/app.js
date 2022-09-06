@@ -3,7 +3,9 @@ const fastify = require('fastify')
 exports.build = function() {
   const app = fastify()
 
-  app.register(require('@fastify/cors'), { origin: /(preon.tk|localhost)/ })
+  app.register(require('@fastify/cors'), {
+    origin: /(preon\.tk$|http:\/\/localhost:\d+)/
+  })
   app.register(require('@fastify/sensible'))
   app.register(require('@fastify/multipart'))
 
